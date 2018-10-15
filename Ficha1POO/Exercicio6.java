@@ -1,19 +1,16 @@
 import java.util.Scanner;
+import java.math.BigInteger;
 
 public class Exercicio6{
 
 	public static void fact(int n){
-		int f = n;
-		
-		while(n != 1){
+		BigInteger f = new BigInteger("1");
 
-			if(n == 1) break;
-			f = f*(n-1);
-			n--;
+		for(int i = 2 ; i <= n ; i++){
+			f = f.multiply(BigInteger.valueOf(i));
 		}
 
-		System.out.println("O fatorial é: " + f);
-
+		//System.out.println("O fatorial é: " + f);
 
 	}
 
